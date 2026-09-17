@@ -1,0 +1,369 @@
+/* ==========================================================================
+   ROOT COLOR SCHEME (PRESERVED ACCORDING TO SYSTEM SPECS)
+   ========================================================================== */
+:root {
+    /* Brand */
+    --primary-color: #0A0A0A;
+    --secondary-color: #A5000D;
+    --accent-color: #A5000D;
+
+    /* Text */
+    --text-color: #1E1E1E;
+    --text-light: #666666;
+
+    /* Background */
+    --bg-color: #FFFFFF;
+    --bg-light: #F5F5F5;
+    --bg-dark: #0A0A0A;
+
+    /* Border */
+    --border-color: #E5E5E5;
+
+    /* Common */
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* ==========================================================================
+   ISOLATED SCOPED FOOTER STYLES (DOES NOT AFFECT EXTERNAL CSS)
+   ========================================================================== */
+.saidpl-footer-section,
+.saidpl-footer-section *,
+.saidpl-footer-section *::before,
+.saidpl-footer-section *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.saidpl-footer-section {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    border-top: 1px solid var(--border-color);
+    padding-top: clamp(4rem, 6vw, 6.5rem);
+    position: relative;
+    z-index: 10;
+}
+
+.saidpl-footer-container {
+    width: 100%;
+    max-width: 1380px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1.25rem, 3vw, 3.5rem);
+    padding-right: clamp(1.25rem, 3vw, 3.5rem);
+}
+
+/* ==========================================================================
+   FOOTER GRID LAYOUT
+   ========================================================================== */
+.saidpl-footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.1fr 1.3fr;
+    gap: clamp(2rem, 3.5vw, 4rem);
+    padding-bottom: clamp(3rem, 4.5vw, 5rem);
+}
+
+/* ==========================================================================
+   BRAND COLUMN
+   ========================================================================== */
+.saidpl-footer-col--brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.saidpl-footer-brand {
+    font-size: clamp(1.35rem, 1.6vw, 1.85rem);
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-bottom: 1.25rem;
+    display: inline-block;
+}
+
+.saidpl-footer-brand-accent {
+    color: var(--secondary-color);
+    max-height: 108px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.35s ease;
+}
+
+.saidpl-footer-about {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.75;
+    margin-bottom: 1.75rem;
+    max-width: 420px;
+}
+
+/* Social Buttons */
+.saidpl-footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.saidpl-footer-social-link {
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border-color);
+    color: var(--primary-color);
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.3s ease,
+                border-color 0.3s ease,
+                color 0.3s ease,
+                box-shadow 0.35s ease;
+}
+
+.saidpl-footer-social-link:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translate3d(0, -4px, 0);
+    box-shadow: 0 8px 18px rgba(255, 183, 3, 0.35);
+}
+
+/* ==========================================================================
+   HEADINGS & NAVIGATION LINKS
+   ========================================================================== */
+.saidpl-footer-heading {
+    font-size: clamp(1.1rem, 1.25vw, 1.3rem);
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.saidpl-footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 32px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.saidpl-footer-nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.saidpl-footer-nav-item {
+    list-style: none;
+}
+
+.saidpl-footer-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.94rem;
+    color: var(--text-light);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.saidpl-footer-link::before {
+    content: '\f105';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    margin-right: 8px;
+    font-size: 0.75rem;
+    color: var(--secondary-color);
+    opacity: 0;
+    transform: translate3d(-6px, 0, 0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.saidpl-footer-link:hover {
+    color: var(--primary-color);
+    transform: translate3d(6px, 0, 0);
+    font-weight: 600;
+}
+
+.saidpl-footer-link:hover::before {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+/* ==========================================================================
+   CONTACT DETAILS COLUMN
+   ========================================================================== */
+.saidpl-footer-contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.saidpl-footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    list-style: none;
+}
+
+.saidpl-footer-contact-icon {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 183, 3, 0.15);
+    color: var(--primary-color);
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.saidpl-footer-contact-item:hover .saidpl-footer-contact-icon {
+    transform: scale(1.1);
+    background-color: var(--secondary-color);
+}
+
+.saidpl-footer-contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.saidpl-footer-contact-link {
+    font-size: 0.94rem;
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.saidpl-footer-contact-link:hover {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.saidpl-footer-address {
+    font-style: normal;
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   FOOTER BOTTOM BAR
+   ========================================================================== */
+.saidpl-footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding: 1.85rem 0;
+    background-color: #FAFAFA;
+}
+
+.saidpl-footer-bottom-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.saidpl-footer-copy {
+    font-size: 0.88rem;
+    color: var(--text-light);
+}
+
+.saidpl-footer-tagline {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text-light);
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS (< 1024px, < 768px, < 480px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .saidpl-footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .saidpl-footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .saidpl-footer-bottom-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+/* ==========================================================================
+   ULTRA-WIDE & 4K RESOLUTIONS (2000px to 3840px+)
+   ========================================================================== */
+@media (min-width: 2000px) {
+    .saidpl-footer-container {
+        max-width: 2560px;
+        padding-left: 4.5rem;
+        padding-right: 4.5rem;
+    }
+
+    .saidpl-footer-brand {
+        font-size: 2.4rem;
+    }
+
+    .saidpl-footer-about {
+        font-size: 1.25rem;
+        max-width: 580px;
+    }
+
+    .saidpl-footer-heading {
+        font-size: 1.65rem;
+        margin-bottom: 2rem;
+    }
+
+    .saidpl-footer-heading::after {
+        width: 48px;
+        height: 4px;
+    }
+
+    .saidpl-footer-link,
+    .saidpl-footer-contact-link,
+    .saidpl-footer-address {
+        font-size: 1.25rem;
+    }
+
+    .saidpl-footer-social-link {
+        width: 54px;
+        height: 54px;
+        font-size: 1.35rem;
+    }
+
+    .saidpl-footer-contact-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+    }
+
+    .saidpl-footer-copy,
+    .saidpl-footer-tagline {
+        font-size: 1.15rem;
+    }
+}

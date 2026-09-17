@@ -1,0 +1,94 @@
+<!-- ==========================================================================
+   ISOLATED NAVBAR COMPONENT (PREFIXED: saidpl-nav-)
+   ========================================================================== -->
+<header class="saidpl-nav-header" id="saidplNavHeaderElement">
+    <div class="saidpl-nav-container">
+        <!-- Brand Logo -->
+        <a href="/index.html" class="saidpl-nav-brand" aria-label="Sri Amma Industrial Developers home">
+            <img src="./asset/img/Nav_logo.png" alt="Sri Amma Industrial Developer Pvt Ltd" class="saidpl-nav-brand-logo">
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="saidpl-nav-menu" id="saidplNavMenu" aria-label="Main Navigation">
+            <ul class="saidpl-nav-list">
+                <li class="saidpl-nav-item">
+                    <a href="/index.html" class="saidpl-nav-link saidpl-nav-link--active">Home</a>
+                </li>
+
+                <!-- About Us (Page + Dropdown) -->
+                <li class="saidpl-nav-item saidpl-nav-item--has-dropdown">
+                    <div class="saidpl-nav-link-box">
+                        <a href="../../../sriammabuilders/asset/page/about.html" class="saidpl-nav-link">About Us</a>
+                        <button class="saidpl-nav-dropdown-toggle" type="button" aria-label="Toggle About submenu" aria-controls="saidplAboutMenu" aria-expanded="false">
+                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <ul class="saidpl-nav-dropdown-menu" id="saidplAboutMenu">
+                        <li class="saidpl-nav-dropdown-item">
+                            <a href="../../../sriammabuilders/asset/page/team.html" class="saidpl-nav-dropdown-link">Our Team</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Service (Page + Dropdown) -->
+                <li class="saidpl-nav-item saidpl-nav-item--has-dropdown">
+                    <div class="saidpl-nav-link-box">
+                        <a href="../../../sriammabuilders/asset/page/service.html" class="saidpl-nav-link">Service</a>
+                        <button class="saidpl-nav-dropdown-toggle" type="button" aria-label="Toggle Services submenu" aria-controls="saidplServicesMenu" aria-expanded="false">
+                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <ul class="saidpl-nav-dropdown-menu" id="saidplServicesMenu">
+                        <li class="saidpl-nav-dropdown-item">
+                            <a href="../../../sriammabuilders/asset/page/industrial-building-construction.html" class="saidpl-nav-dropdown-link">Industrial Building Construction</a>
+                        </li>
+                        <li class="saidpl-nav-dropdown-item">
+                            <a href="../../../sriammabuilders/asset/page/residential_building_construction.html" class="saidpl-nav-dropdown-link">Residential Building Construction</a>
+                        </li>
+                        <li class="saidpl-nav-dropdown-item">
+                            <a href="../../../sriammabuilders/asset/page/commercial_building_construction.html" class="saidpl-nav-dropdown-link">Commercial Building Construction</a>
+                        </li>
+                        <li class="saidpl-nav-dropdown-item">
+                            <a href="../../../sriammabuilders/asset/page/godown_building_construction.html" class="saidpl-nav-dropdown-link">Godown Building Construction</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="saidpl-nav-item">
+                    <a href="../../../sriammabuilders/asset/page/project.html" class="saidpl-nav-link">Project</a>
+                </li>
+
+                <li class="saidpl-nav-item">
+                    <a href="../../../sriammabuilders/asset/page/contact.html" class="saidpl-nav-link">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Right Side Action & Mobile Toggle -->
+        <div class="saidpl-nav-action-area">
+            <a href="https://wa.me/919444405505?text=Hi%2C%20could%20you%20please%20share%20more%20details" target="_blank" rel="noopener noreferrer" class="saidpl-nav-cta-btn">
+                <span class="saidpl-nav-cta-icon"><svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            width="24"
+            height="24"
+            fill="currentColor"
+            aria-hidden="true">
+
+            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+
+        </svg></span>
+                <span class="saidpl-nav-cta-text">+91 94444 05505</span>
+            </a>
+
+            <button class="saidpl-nav-hamburger" id="saidplNavHamburger" type="button" aria-label="Toggle mobile navigation" aria-controls="saidplNavMenu" aria-expanded="false">
+                <span class="saidpl-nav-bar saidpl-nav-bar--1"></span>
+                <span class="saidpl-nav-bar saidpl-nav-bar--2"></span>
+                <span class="saidpl-nav-bar saidpl-nav-bar--3"></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Navigation Drawer Backdrop -->
+<div class="saidpl-nav-backdrop" id="saidplNavBackdrop"></div>

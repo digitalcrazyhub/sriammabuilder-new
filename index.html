@@ -1,0 +1,777 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sri Amma Industrial Developer PVT LTD delivers industrial, commercial, residential and godown construction solutions in Chennai and Tamil Nadu.">
+    <meta name="robots" content="index, follow">
+
+    <title>Sri Amma Industrial Developer PVT LTD | Industrial, Commercial & Residential Construction</title>
+    <link rel="canonical" href="https://www.sriammaindustrial.com/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./asset/css/main.css">
+    <link rel="stylesheet" href="./asset/css/navbar.css">
+    <link rel="stylesheet" href="./asset/css/footer.css">
+    <link rel="stylesheet" href="./asset/css/float.css">
+    <link rel="icon" href="./asset/img/web_icon.png" sizes="192x192">
+
+</head>
+
+<body>
+    <!-- Header Navigation -->
+    <div id="saidplNavHeader"></div>
+
+    <!-- 1. Hero Carousel Section with Background Video Loop -->
+    <section class="hero-slider-section" id="home">
+        <div class="video-background-wrapper">
+            <video class="hero-video" autoplay loop muted playsinline>
+                <source src="./asset/img/home-banner-video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-backdrop-overlay"></div>
+        </div>
+
+        <div class="hero-slider-wrapper">
+            <div class="hero-slider-track" id="heroTrack">
+
+                <!-- Slide 1 -->
+                <div class="hero-slide is-active" data-index="0">
+                    <div class="container hero-content">
+                        <span class="badge-tag">Sri Amma Industrial Developer Pvt Ltd</span>
+                        <h1 class="hero-title">We combine Innovation, expertise, and excellence for sustainable success.
+                        </h1>
+                        <p class="hero-desc">Pioneering world-class industrial construction, pre-engineered structures,
+                            and high-tonnage facilities engineered to endure.</p>
+                        <div class="hero-btns">
+                            <a href="./asset/img/Sri_Amma_Industrial_Developer_PVT_LTD.pdf" download
+                                class="btn btn-accent">
+                                <span>Company Profile</span>
+                                <i data-lucide="download"></i>
+                            </a>
+                            <a href="./asset/page/service.html" class="btn btn-outline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="hero-slide" data-index="1">
+                    <div class="container hero-content">
+                        <span class="badge-tag">Heavy Civil Construction</span>
+                        <h1 class="hero-title">Industrial Infrastructure Engineered for Global Demands.</h1>
+                        <p class="hero-desc">Delivering turnkey manufacturing plants, automated factories, and heavy
+                            foundation engineering on aggressive schedules.</p>
+                        <div class="hero-btns">
+                            <a href="./asset/img/Sri_Amma_Industrial_Developer_PVT_LTD.pdf" download
+                                class="btn btn-accent">
+                                <span>Company Profile</span>
+                                <i data-lucide="download"></i>
+                            </a>
+                            <a href="./asset/page/service.html" class="btn btn-outline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="hero-slide" data-index="2">
+                    <div class="container hero-content">
+                        <span class="badge-tag">Logistics & Warehousing</span>
+                        <h1 class="hero-title">Durable Logistics Hubs & High-Bay Warehouse Complexes.</h1>
+                        <p class="hero-desc">Engineered for maximum space utilization, heavy vehicle handling, and
+                            trimix industrial flooring for seamless logistics.</p>
+                        <div class="hero-btns">
+                            <a href="./asset/img/Sri_Amma_Industrial_Developer_PVT_LTD.pdf" download
+                                class="btn btn-accent">
+                                <span>Company Profile</span>
+                                <i data-lucide="download"></i>
+                            </a>
+                            <a href="./asset/page/service.html" class="btn btn-outline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="hero-slide" data-index="3">
+                    <div class="container hero-content">
+                        <span class="badge-tag">Commercial & Townships</span>
+                        <h1 class="hero-title">Smart, Strong Structures Built for Scalable Enterprises.</h1>
+                        <p class="hero-desc">Modern business facilities, corporate offices, and architectural landmarks
+                            that balance beauty with structural rigidity.</p>
+                        <div class="hero-btns">
+                            <a href="./asset/img/Sri_Amma_Industrial_Developer_PVT_LTD.pdf" download
+                                class="btn btn-accent">
+                                <span>Company Profile</span>
+                                <i data-lucide="download"></i>
+                            </a>
+                            <a href="./asset/page/service.html" class="btn btn-outline">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="hero-nav-controls">
+            <button class="nav-arrow prev-btn" id="prevSlide" aria-label="Previous Slide">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="nav-arrow next-btn" id="nextSlide" aria-label="Next Slide">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="hero-pagination-wrapper">
+            <div class="hero-dots" id="heroDots">
+                <button class="dot is-active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+                <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+                <button class="dot" data-slide="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="hero-progress-track">
+                <div class="hero-progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Logo Showcase Marquee Slide -->
+    <section class="clients-ticker slide-on-scroll slide-up">
+        <div class="ticker-wrapper">
+            <div class="ticker-track">
+                <div class="client-card"><img src="./asset/img/Logo/logo1.jpg" alt="Partner Logo"></div>
+                <div class="client-card"><img src="./asset/img/Logo/logo2.jpg" alt="Partner Logo"></div>
+                <div class="client-card"><img src="./asset/img/Logo/logo3.png" alt="Partner Logo"></div>
+                <div class="client-card"><img src="./asset/img/Logo/logo8.jpg" alt="Partner Logo"></div>
+                <div class="client-card"><img src="./asset/img/Logo/logo4.jpg" alt="Partner Logo"></div>
+                <div class="client-card"><img src="./asset/img/Logo/logo5.jpg" alt="Partner Logo"></div>
+                <div class="client-card"><img src="./asset/img/Logo/logo6.jpg" alt="Partner Logo"></div>
+                <div class="client-card"><img src="./asset/img/Logo/logo14.jpg" alt="Partner Logo"></div>
+                <!-- Seamless Loop Duplicate -->
+                <div class="client-card"><img src="./asset/img/Logo/logo1.jpg" alt="Partner Logo"></div>
+                <div class="client-card"><img src="./asset/img/Logo/logo2.jpg" alt="Partner Logo"></div>
+                <div class="client-card"><img src="./asset/img/Logo/logo3.png" alt="Partner Logo"></div>
+                <div class="client-card"><img src="./asset/img/Logo/logo8.jpg" alt="Partner Logo"></div>
+                <div class="client-card"><img src="./asset/img/Logo/logo4.jpg" alt="Partner Logo"></div>
+                <div class="client-card"><img src="./asset/img/Logo/logo5.jpg" alt="Partner Logo"></div>
+                <div class="client-card"><img src="./asset/img/Logo/logo6.jpg" alt="Partner Logo"></div>
+                <div class="client-card"><img src="./asset/img/Logo/logo14.jpg" alt="Partner Logo"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. About Section with Multi-Directional Sliding Containers -->
+    <section class="about-section section-padding" id="about">
+        <div class="container about-grid">
+
+            <div class="about-text-col slide-on-scroll slide-left">
+                <span class="sub-heading">About</span>
+                <h2 class="section-title">Building Stronger Future for Your Dream Home.</h2>
+                <p class="section-desc">We deliver innovative construction solutions with strong foundations, modern
+                    design, and long-term value.</p>
+                <a href="./asset/page/service.html" class="btn btn-accent">
+                    <span>Read More</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="about-image-col slide-on-scroll slide-zoom">
+                <div class="image-frame">
+                    <img src="./asset/img/about_img01.png" alt="About Sri Amma Builders">
+                </div>
+            </div>
+
+            <div class="about-features-col slide-on-scroll slide-right staggered-slide">
+                <div class="feature-card">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                            viewBox="0 0 60 60" fill="#A5000D">
+                            <path
+                                d="M41.1997 11.501L37.8472 14.8525C36.9898 14.4082 36.0908 14.0371 35.1616 13.7432V9H24.8384V13.7432C23.9092 14.0371 23.0103 14.4082 22.1528 14.8525L18.8003 11.501L11.501 18.8008L14.853 22.1533C14.4087 23.0107 14.0371 23.9092 13.7432 24.8389H9V28.792H11V26.8389H15.2603L15.4585 26.0977C15.8003 24.8213 16.3042 23.6025 16.9556 22.4766L17.3398 21.8115L14.3291 18.8008L18.8003 14.3291L21.8115 17.3398L22.4761 16.9551C23.6025 16.3037 24.8203 15.8008 26.0967 15.459L26.8384 15.2607V11H33.1616V15.2607L33.9033 15.459C35.1797 15.8008 36.3975 16.3037 37.5239 16.9551L38.1885 17.3398L41.1997 14.3291L45.6709 18.8008L42.6602 21.8115L43.0444 22.4766C43.6958 23.6026 44.1997 24.8213 44.5415 26.0977L44.7397 26.8389H49V33.1611H44.7397L44.5415 33.9024C44.1997 35.1787 43.6958 36.3975 43.0444 37.5234L42.6602 38.1885L45.6709 41.1992L41.1997 45.6709L38.1895 42.6602L37.5249 43.0439C36.7779 43.4755 35.9793 43.8185 35.1616 44.1165V39.5781C37.8701 38.1133 39.8794 35.5205 40.5933 32.5303L38.648 32.0654C38.0249 34.6768 36.19 36.916 33.7398 38.0557L33.1616 38.3242V49H26.8384V38.3242L26.2603 38.0557C23.1319 36.5996 21.1104 33.4385 21.1104 30C21.1104 26.4688 23.2198 23.3018 26.376 21.8916V32.9307H33.6241V21.8916C36.7803 23.3018 38.8897 26.4688 38.8897 30H40.8897C40.8897 25.1182 37.5996 20.8037 32.8892 19.5098L31.624 19.1621V30.9307H28.376V19.1621L27.1108 19.5098C22.4004 20.8037 19.1104 25.1182 19.1104 30C19.1104 33.9971 21.3384 37.6885 24.8384 39.5781V44.1165C24.0208 43.8185 23.2223 43.4758 22.4751 43.0439L21.8106 42.6602L18.8003 45.6709L14.3291 41.1992L17.3399 38.1885L16.9556 37.5234C16.3042 36.3975 15.8003 35.1787 15.4585 33.9024L15.2603 33.1611H11V31.6143H9.00002V35.1611H13.7432C14.0371 36.0908 14.4087 36.9893 14.853 37.8467L11.501 41.1992L18.8003 48.499L22.1524 45.1465C23.0092 45.5904 23.9121 45.948 24.8384 46.2417V51H35.1616V46.2422C36.088 45.9483 36.9909 45.5901 37.8472 45.1465L41.1997 48.499L48.4991 41.1992L45.147 37.8467C45.5913 36.9893 45.9629 36.0908 46.2569 35.1611H51V24.8389H46.2569C45.9629 23.9092 45.5913 23.0108 45.147 22.1533L48.4991 18.8008L41.1997 11.501Z"
+                                fill="#A5000D"></path>
+                            <path
+                                d="M11.5566 48.6738C10.8524 48.6738 10.1998 48.8725 9.62445 49.1933C4.70557 43.9783 2 37.1988 2 30C2 14.5605 14.5605 2 30 2C34.0938 2 38.0386 2.86328 41.7256 4.56641L42.5645 2.75C38.6123 0.92578 34.3853 0 30 0C13.458 0 0 13.458 0 30C0 37.714 2.89954 44.9794 8.17133 50.5664C7.78797 51.18 7.55664 51.8984 7.55664 52.6738C7.55664 54.8799 9.35107 56.6738 11.5566 56.6738C13.7622 56.6738 15.5566 54.8799 15.5566 52.6738C15.5566 50.4678 13.7622 48.6738 11.5566 48.6738ZM11.5566 54.6738C10.4536 54.6738 9.55664 53.7764 9.55664 52.6738C9.55664 51.5713 10.4536 50.6738 11.5566 50.6738C12.6597 50.6738 13.5566 51.5713 13.5566 52.6738C13.5566 53.7764 12.6597 54.6738 11.5566 54.6738Z"
+                                fill="#A5000D"></path>
+                            <path
+                                d="M51.8287 9.43359C52.212 8.82 52.4434 8.10162 52.4434 7.32617C52.4434 5.12012 50.6489 3.32617 48.4434 3.32617C46.2378 3.32617 44.4434 5.12012 44.4434 7.32617C44.4434 9.53222 46.2378 11.3262 48.4434 11.3262C49.1476 11.3262 49.8002 11.1275 50.3756 10.8067C55.2944 16.0217 58 22.8012 58 30C58 45.4395 45.4395 58 30 58C25.9063 58 21.9614 57.1367 18.2744 55.4336L17.4355 57.25C21.3877 59.0742 25.6147 60 30 60C46.542 60 60 46.542 60 30C60 22.286 57.1005 15.0206 51.8287 9.43359ZM46.4434 7.32617C46.4434 6.22363 47.3403 5.32617 48.4434 5.32617C49.5464 5.32617 50.4434 6.22363 50.4434 7.32617C50.4434 8.42871 49.5464 9.32617 48.4434 9.32617C47.3403 9.32617 46.4434 8.42871 46.4434 7.32617Z"
+                                fill="#A5000D"></path>
+                        </svg></div>
+                    <div class="feature-info">
+                        <h4>Experienced Staff</h4>
+                        <p>Professional team with deep industry knowledge.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                            viewBox="0 0 40 40" fill="#A5000D">
+                            <path
+                                d="M1.48519 16.1276C1.61446 16.2835 1.77434 16.4113 1.95493 16.503C2.13553 16.5948 2.33302 16.6485 2.5352 16.6609H2.62988C2.87664 16.6605 3.11945 16.5989 3.33654 16.4816V26.9801C3.33798 28.2791 4.39075 29.3319 5.68983 29.3334H19.3103L15.4297 33.8206C14.08 35.3807 14.2505 37.7397 15.8107 39.0895C17.3709 40.4392 19.7299 40.2687 21.0796 38.7085L29.0795 29.4546C32.0224 30.2579 35.1708 29.4504 37.3638 27.3298C39.5567 25.2092 40.4694 22.0896 39.7653 19.1214C39.7113 18.889 39.594 18.6762 39.4262 18.5066C39.2585 18.337 39.047 18.2173 38.8152 18.1608C38.5868 18.1036 38.347 18.1112 38.1226 18.1828C37.8983 18.2544 37.6984 18.3871 37.5453 18.5661L33.8394 22.852L29.9148 22.78L29.2775 18.9061L32.984 14.6214C33.1384 14.4441 33.2407 14.2274 33.2794 13.9954C33.3181 13.7635 33.2918 13.5254 33.2034 13.3075C33.1136 13.0867 32.9644 12.895 32.7724 12.7538C32.5803 12.6126 32.3529 12.5274 32.1154 12.5075C31.2526 12.4359 30.3838 12.4952 29.5388 12.6835L26.6695 10.0715V4.1738C26.6684 3.34215 25.9944 2.66824 25.1629 2.66719H22.1763C21.3446 2.6683 20.6707 3.34222 20.6696 4.1738V4.62378L16.0137 0.395846C15.4443 -0.131949 14.5644 -0.131949 13.9951 0.395846L0.503875 12.6443C-0.110595 13.213 -0.169319 14.1643 0.370549 14.8042L1.48519 16.1276ZM12.003 28V20.6669C12.003 20.2987 12.3014 20.0002 12.6696 20.0002H17.3362C17.7043 20.0002 18.0028 20.2987 18.0028 20.6669V28.0001H12.003V28ZM19.3362 28V20.6669C19.3362 19.5623 18.4408 18.6669 17.3362 18.6669H12.6697C11.5651 18.6669 10.6697 19.5623 10.6697 20.6669V28.0001H5.68977C5.12674 27.9994 4.67053 27.5431 4.66981 26.9801V15.337L15.0029 5.95442L25.1215 15.1482C25.0208 15.2529 24.9135 15.3482 24.8181 15.4589C22.6367 17.9733 22.0972 21.5187 23.4322 24.5681L20.4636 28H19.3362ZM31.3587 13.8036C31.5427 13.8036 31.7274 13.8103 31.9113 13.8243L28.0694 18.2669C28.0055 18.3408 27.9586 18.428 27.9321 18.5221C27.9056 18.6162 27.9001 18.715 27.9161 18.8115L28.694 23.5407C28.7193 23.6946 28.7977 23.8348 28.9156 23.9369C29.0335 24.0389 29.1834 24.0964 29.3394 24.0994L34.1313 24.1874C34.3295 24.1912 34.519 24.1066 34.6486 23.9567L38.4925 19.5115C39.0706 22.0806 38.2223 24.7621 36.2718 26.5313C34.3213 28.3005 31.57 28.8839 29.0694 28.0587C28.944 28.0177 28.8093 28.0149 28.6823 28.0505C28.5554 28.0861 28.4418 28.1585 28.356 28.2587L20.0695 37.8359C19.6519 38.3145 19.0616 38.6083 18.4279 38.6528C17.7942 38.6974 17.1686 38.4891 16.6881 38.0736C16.2075 37.6581 15.9111 37.0692 15.8637 36.4357C15.8162 35.8022 16.0216 35.1757 16.435 34.6933L24.7228 25.1134C24.8088 25.0139 24.8634 24.8912 24.8797 24.7607C24.8961 24.6302 24.8735 24.4978 24.8148 24.3801C24.2583 23.2653 23.9959 22.0268 24.0526 20.7821C24.1093 19.5374 24.4833 18.3278 25.1389 17.2683C25.7945 16.2087 26.71 15.3343 27.7986 14.728C28.8872 14.1218 30.1126 13.8038 31.3586 13.8044V13.8036H31.3587ZM22.0028 4.1738C22.004 4.1282 22.0227 4.08479 22.0549 4.05253C22.0872 4.02027 22.1306 4.00163 22.1762 4.00045H25.1628C25.2084 4.00163 25.2518 4.02027 25.2841 4.05253C25.3163 4.08479 25.335 4.1282 25.3361 4.1738V8.86103L22.0028 5.83441V4.1738ZM1.40317 13.6269L14.8936 1.37854C14.9233 1.34988 14.963 1.33386 15.0043 1.33386C15.0456 1.33386 15.0852 1.34988 15.1149 1.37854L28.056 13.1337C27.3648 13.4226 26.7139 13.7998 26.1194 14.2556L15.4529 4.56315C15.3302 4.45165 15.1704 4.38987 15.0046 4.38987C14.8388 4.38987 14.6789 4.45165 14.5562 4.56315L3.53646 14.567H3.53246L2.7365 15.2903C2.70492 15.3184 2.66407 15.3338 2.62181 15.3336C2.59909 15.3319 2.577 15.3253 2.557 15.3144C2.53701 15.3035 2.51955 15.2885 2.50581 15.2703L1.38782 13.9463C1.35153 13.9002 1.33311 13.8424 1.33593 13.7838C1.33875 13.7251 1.36262 13.6694 1.40317 13.6269Z"
+                                fill="#A5000D"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M19.2355 34.1386L18.0122 35.5659C17.9026 35.7009 17.8501 35.8733 17.8658 36.0464C17.8814 36.2195 17.9641 36.3797 18.0962 36.4927C18.2283 36.6058 18.3993 36.6627 18.5728 36.6515C18.7463 36.6403 18.9085 36.5617 19.0249 36.4325L20.2482 35.0053C20.3573 34.8703 20.4095 34.698 20.3936 34.5252C20.3778 34.3523 20.2951 34.1925 20.1632 34.0796C20.0313 33.9667 19.8606 33.9098 19.6874 33.9208C19.5142 33.9318 19.352 34.01 19.2355 34.1386Z"
+                                fill="#A5000D"></path>
+                        </svg></div>
+                    <div class="feature-info">
+                        <h4>Modern Technology</h4>
+                        <p>Advanced tools and smart construction practices.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                            <path
+                                d="M566.3 223.7L332.3 67.7C324.3 62.8 315.8 62.7 307.7 67.7L73.7 223.7C67.7 227.7 64 234.8 64 242L64 398C64 405.1 67.7 412.3 73.7 416.3L307.7 572.3C315.7 577.2 324.2 577.3 332.3 572.3L566.3 416.3C572.3 412.3 576 405.2 576 398L576 242C576 234.9 572.3 227.7 566.3 223.7zM342 127.1L514.3 242L437.4 293.4L342 229.7L342 127.1zM298 127.1L298 229.7L202.6 293.4L125.7 242L298 127.1zM108 283.1L163.1 320L108 356.8L108 283.1zM298 512.8L125.7 398L202.6 346.6L298 410.3L298 512.8zM320 372L242.3 320L320 268L397.7 320L320 372zM342 512.9L342 410.3L437.4 346.6L514.3 398L342 512.9zM532 356.9L476.9 320L532 283.1L532 356.8z"
+                                fill="#A5000D"></path>
+                        </svg></div>
+                    <div class="feature-info">
+                        <h4>Quality Assurance</h4>
+                        <p>We maintain strict quality standards to ensure durability, safety, and excellence in every
+                            project.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. Services Interactive Sliding Tabs Section -->
+    <section class="services-section section-padding" id="services">
+        <div class="container">
+            <div class="section-header center slide-on-scroll slide-up">
+                <span class="sub-heading">Our Awesome Services</span>
+                <h2 class="section-title">We Provide Our Services All Over The World</h2>
+            </div>
+
+            <div class="services-tabs-container slide-on-scroll slide-up">
+                <div class="service-nav-tabs">
+                    <button class="tab-btn active" data-tab="tab1">
+                        <i class="fa-solid fa-industry"></i>
+                        <span>Industrial Construction</span>
+                    </button>
+                    <button class="tab-btn" data-tab="tab2">
+                        <i class="fa-solid fa-house-chimney"></i>
+                        <span>Residential Construction</span>
+                    </button>
+                    <button class="tab-btn" data-tab="tab3">
+                        <i class="fa-solid fa-building"></i>
+                        <span>Commercial Construction</span>
+                    </button>
+                    <button class="tab-btn" data-tab="tab4">
+                        <i class="fa-solid fa-warehouse"></i>
+                        <span>Godown Construction</span>
+                    </button>
+                </div>
+
+                <div class="service-tab-content">
+
+                    <!-- Tab 1 -->
+                    <div class="tab-panel active" id="tab1">
+                        <div class="tab-grid">
+                            <div class="tab-img-box slide-on-tab slide-left">
+                                <img src="./asset/img/industrial_service_tab.png" alt="Industrial Construction">
+                            </div>
+                            <div class="tab-info-box slide-on-tab slide-right">
+                                <h3>Building The Future Of Advances Business</h3>
+                                <p>We design and construct modern residential spaces that combine comfort, strength, and
+                                    timeless aesthetics. From planning to execution, our expert team ensures quality
+                                    craftsmanship, reliable timelines, and complete customer satisfaction for every home
+                                    we build.</p>
+                                <a href="./asset/page/industrial-building-construction.html" class="btn btn-outline">
+                                    <span>Read More</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2 -->
+                    <div class="tab-panel" id="tab2">
+                        <div class="tab-grid">
+                            <div class="tab-img-box slide-on-tab slide-left">
+                                <img src="./asset/img/residential_service_tab.png" alt="Residential Construction">
+                            </div>
+                            <div class="tab-info-box slide-on-tab slide-right">
+                                <h3>Building Comfortable Homes with Quality & Trust</h3>
+                                <p>Sri Amma Industrial Developers Pvt Ltd specializes in high-quality residential
+                                    building construction, delivering strong, well-planned homes that combine comfort,
+                                    safety, and modern design. From initial planning to final completion, our expert
+                                    team ensures superior workmanship, premium materials, and on-time project
+                                    delivery—turning your dream home into reality.</p>
+                                <a href="./asset/page/residential_building_construction.html" class="btn btn-outline">
+                                    <span>Read More</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 3 -->
+                    <div class="tab-panel" id="tab3">
+                        <div class="tab-grid">
+                            <div class="tab-img-box slide-on-tab slide-left">
+                                <img src="./asset/img/commercial_service_tab.png" alt="Commercial Construction">
+                            </div>
+                            <div class="tab-info-box slide-on-tab slide-right">
+                                <h3>Smart, Strong Structures for Growing Businesses</h3>
+                                <p>Sri Amma Industrial Developers Pvt Ltd provides reliable commercial building
+                                    construction services designed for offices, showrooms, retail spaces, and business
+                                    facilities. We focus on functional design, structural strength, and timely execution
+                                    to support smooth business operations and long-term value.</p>
+                                <a href="./asset/page/commercial_building_construction.html" class="btn btn-outline">
+                                    <span>Read More</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 4 -->
+                    <div class="tab-panel" id="tab4">
+                        <div class="tab-grid">
+                            <div class="tab-img-box slide-on-tab slide-left">
+                                <img src="./asset/img/godown_service_tab.png" alt="Godown Construction">
+                            </div>
+                            <div class="tab-info-box slide-on-tab slide-right">
+                                <h3>Durable Warehouse Solutions for Efficient Storage</h3>
+                                <p>Sri Amma Industrial Developers Pvt Ltd offers durable and cost-effective godown
+                                    building construction solutions for warehouses and storage facilities. Our
+                                    structures are designed for maximum space utilization, high load capacity, and
+                                    long-lasting performance, ensuring safety and efficiency for industrial and
+                                    commercial storage needs.</p>
+                                <a href="./asset/page/godown_building_construction.html" class="btn btn-outline">
+                                    <span>Read More</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats & Counter Banner -->
+    <section class="stats-banner slide-on-scroll slide-up">
+        <div class="container stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">
+                    <span class="stat-counter" data-target="1000" data-format="comma">0</span><span
+                        class="stat-suffix">+</span>
+                </div>
+                <span class="stat-label">Completed Projects</span>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">
+                    <span class="stat-counter" data-target="100">0</span><span class="stat-suffix">%</span>
+                </div>
+                <span class="stat-label">Client Satisfaction</span>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">
+                    <span class="stat-counter" data-target="280">0</span><span class="stat-suffix">+</span>
+                </div>
+                <span class="stat-label">Team Members</span>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">
+                    <span class="stat-counter" data-target="25">0</span><span class="stat-suffix">+</span>
+                </div>
+                <span class="stat-label">Awards</span>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">
+                    <span class="stat-counter" data-target="35">0</span><span class="stat-suffix">+</span>
+                </div>
+                <span class="stat-label">Years of Experience</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Work Process Sliding Sequence -->
+    <section class="process-section section-padding" id="process">
+        <div class="container">
+
+            <div class="process-header-grid">
+                <div class="process-title-box slide-on-scroll slide-left">
+                    <span class="sub-heading">How To Process</span>
+                    <h2 class="section-title">Steps Of Construction Work Process</h2>
+                    <p class="section-desc">We follow a systematic construction process to ensure quality, safety, and
+                        timely delivery for every project.</p>
+                </div>
+                <div class="process-video-box slide-on-scroll slide-right">
+                    <video autoplay muted loop playsinline class="process-loop-video">
+                        <source src="./asset/img/proccess_video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="steps-grid staggered-slide slide-on-scroll slide-up">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <span class="step-phase">Step</span>
+                    <h3 class="step-title">Planning</h3>
+                    <p class="step-desc">Project evaluation, budgeting, and scheduling for smooth execution.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <span class="step-phase">Step</span>
+                    <h3 class="step-title">Design</h3>
+                    <p class="step-desc">Architectural and structural design as per client requirements.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <span class="step-phase">Step</span>
+                    <h3 class="step-title">Development</h3>
+                    <p class="step-desc">Construction execution with quality materials and supervision.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <span class="step-phase">Step</span>
+                    <h3 class="step-title">Deliver</h3>
+                    <p class="step-desc">Final inspection, testing, and successful project handover.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. Project Clarity Gallery -->
+    <section class="projects-section section-padding" id="projects">
+        <div class="container">
+
+            <div class="section-header-flex slide-on-scroll slide-up">
+                <div>
+                    <span class="sub-heading">Our Project</span>
+                    <h2 class="section-title">Our Project Clarity</h2>
+                </div>
+                <a href="./asset/page/project.html" class="btn btn-accent">
+                    <span>View All Projects</span>
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+            </div>
+
+            <div class="projects-grid staggered-slide slide-on-scroll slide-up">
+                <div class="project-card">
+                    <img src="./asset/img/sitephotos/img01.png" alt="Project 1">
+                    <div class="project-overlay">
+                        <span class="proj-cat">Industrial</span>
+                        <h4>ESAB Manufacturing Facility</h4>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="./asset/img/sitephotos/img02.png" alt="Project 2">
+                    <div class="project-overlay">
+                        <span class="proj-cat">Commercial</span>
+                        <h4>Daebu Automotive Seat Facility</h4>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="./asset/img/sitephotos/img12.png" alt="Project 3">
+                    <div class="project-overlay">
+                        <span class="proj-cat">Warehouse</span>
+                        <h4>NVH India Central Godown</h4>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="./asset/img/sitephotos/img04.png" alt="Project 4">
+                    <div class="project-overlay">
+                        <span class="proj-cat">Industrial</span>
+                        <h4>Sundram Fasteners Shed</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ============================================================
+     8. TESTIMONIALS & CTA
+     ============================================================ -->
+    <section class="saidpl-testimonial-section">
+        <div class="container">
+            <div class="saidpl-testimonial-grid">
+                <!-- ==================================================
+                 TESTIMONIAL CARD
+                 ================================================== -->
+                <div class="saidpl-testimonial-card">
+                    <!-- Header -->
+                    <div class="saidpl-testimonial-header">
+                        <div>
+                            <span class="saidpl-testimonial-label">Our Testimonials</span>
+                            <h2 class="saidpl-testimonial-title">
+                                What Our Clients Say About Our Work
+                            </h2>
+                        </div>
+                        <div class="saidpl-testimonial-quote-mark">
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+                    </div>
+                    <!-- ==================================================
+                     CAROUSEL
+                     ================================================== -->
+                    <div class="saidpl-testimonial-carousel">
+                        <div class="saidpl-testimonial-track" id="saidplTestimonialTrack">
+                            <!-- ==============================
+                             TESTIMONIAL 1
+                             ============================== -->
+                            <article class="saidpl-testimonial-item">
+                                <div class="saidpl-testimonial-logo">
+                                    <img src="./asset/img/Logo/resize_logo/logo_5.jpg" alt="ESAB India Limited">
+                                </div>
+                                <div class="saidpl-testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                </div>
+                                <blockquote class="saidpl-testimonial-text">
+                                    “We appreciate the work delivered by
+                                    Amma Builders in constructing our Flux
+                                    Cored Wire production building at the
+                                    ESAB India Limited Irungattukottai
+                                    facility. The team completed the 30,000
+                                    sq. ft. project on schedule while
+                                    maintaining excellent quality and
+                                    attention to detail. Their professionalism
+                                    and flexibility during the project were
+                                    highly commendable.”
+                                </blockquote>
+                                <div class="saidpl-testimonial-author">
+                                    <h4>K R Hemachandran</h4>
+                                    <span>Factory Manager</span>
+                                    <small>ESAB India Ltd., Irungattukottai Plant</small>
+                                </div>
+                            </article>
+                            <!-- ==============================
+                             TESTIMONIAL 2
+                             ============================== -->
+
+                            <article class="saidpl-testimonial-item">
+                                <div class="saidpl-testimonial-logo">
+                                    <img src="./asset/img/Logo/resize_logo/logo_6.jpg" alt="Client Logo">
+                                </div>
+                                <div class="saidpl-testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                </div>
+                                <blockquote class="saidpl-testimonial-text">
+                                    “We engaged Sri Amma Builders for our new facility project and were
+                                    impressed by their technically efficient team and commitment to quality
+                                    and cost control. The 50,000 sq. ft. project was completed as scheduled,
+                                    meeting our expectations.”
+                                </blockquote>
+                                <div class="saidpl-testimonial-author">
+                                    <h4> Daebu Automotive Seat India Pvt. Ltd.</h4>
+                                    <!-- <span>Project Manager</span> -->
+                                    <!-- <small>Client Company</small> -->
+                                </div>
+                            </article>
+                            <!-- ==============================
+                             TESTIMONIAL 3
+                             ============================== -->
+                            <article class="saidpl-testimonial-item">
+                                <div class="saidpl-testimonial-logo">
+                                    <img src="./asset/img/Logo/resize_logo/logo_7.jpg"
+                                        alt="Sundram Fasteners Ltd – Autolec Division">
+                                </div>
+                                <div class="saidpl-testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                </div>
+                                <blockquote class="saidpl-testimonial-text">
+                                    “We awarded Sri Amma Builders the civil contract for constructing our
+                                    industrial sheds. Their team delivered good quality work, demonstrated
+                                    strong resource management, and ensured timely completion of the
+                                    project.”
+                                </blockquote>
+                                <div class="saidpl-testimonial-author">
+                                    <h4>R.Radhakrishnan</h4>
+                                    <span>General Manager (Operations)</span>
+                                    <small>Sundram Fasteners Ltd – Autolec Division</small>
+                                </div>
+                            </article>
+                            <!-- ==============================
+                             TESTIMONIAL 4
+                             ============================== -->
+                            <article class="saidpl-testimonial-item">
+                                <div class="saidpl-testimonial-logo">
+                                    <img src="./asset/img/Logo/resize_logo/logo_8.jpg"
+                                        alt="NVH India Auto Parts Private Limited">
+                                </div>
+                                <div class="saidpl-testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                </div>
+                                <blockquote class="saidpl-testimonial-text">
+                                    “We awarded the civil contract for our warehouse project to Sri Amma
+                                    Industrial Developers Pvt. Ltd.. Their team delivered good quality work,
+                                    efficiently mobilized resources, and completed the project on time.”
+                                </blockquote>
+                                <div class="saidpl-testimonial-author">
+                                    <h4>K. H. Song</h4>
+                                    <span>Director</span>
+                                    <small>NVH India Auto Parts Private Limited</small>
+                                </div>
+                            </article>
+                            <!-- ==============================
+                             TESTIMONIAL 5
+                             ============================== -->
+                            <article class="saidpl-testimonial-item">
+                                <div class="saidpl-testimonial-logo">
+                                    <img src="./asset/img/Logo/resize_logo/logo_9.jpg"
+                                        alt="Daechang India Seat Company Pvt. Ltd.">
+                                </div>
+                                <div class="saidpl-testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                </div>
+                                <blockquote class="saidpl-testimonial-text">
+                                    "Sri Amma Builders successfully managed our 6-Crore project, delivering
+                                    50,000 sq. ft. of construction on schedule. Their team is technically
+                                    sound, cost-conscious, and committed to project deadlines."
+                                </blockquote>
+                                <div class="saidpl-testimonial-author">
+                                    <h4>Daechang India Seat Company Pvt. Ltd.</h4>
+                                    <span>Project Head</span>
+                                    <small>Client Company</small>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <!-- ==================================================
+                     CAROUSEL NAVIGATION
+                     ================================================== -->
+                    <div class="saidpl-testimonial-navigation">
+                        <div class="saidpl-testimonial-counter">
+                            <span id="saidplTestimonialCurrent">01</span>
+                            <span class="saidpl-testimonial-counter-line"></span>
+                            <span>05</span>
+                        </div>
+                        <div class="saidpl-testimonial-arrows">
+                            <button type="button" id="saidplTestimonialPrev" class="saidpl-testimonial-arrow"
+                                aria-label="Previous testimonial">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </button>
+                            <button type="button" id="saidplTestimonialNext" class="saidpl-testimonial-arrow"
+                                aria-label="Next testimonial">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Progress -->
+                    <div class="saidpl-testimonial-progress">
+                        <span id="saidplTestimonialProgress"></span>
+                    </div>
+                </div>
+                <!-- ==================================================
+                 CTA CARD
+                 ================================================== -->
+                <div class="saidpl-testimonial-cta">
+                    <div class="saidpl-cta-decoration"></div>
+                    <span class="saidpl-testimonial-label">Let's Connect</span>
+                    <h3>Let's Build<span>Future.</span></h3>
+                    <p>
+                        Sri Amma Industrial Developer Pvt. Ltd.
+                        delivers reliable construction solutions
+                        with precision and integrity.
+
+                        From industrial projects to modern
+                        infrastructure, we build strong foundations
+                        for lasting growth.
+                    </p>
+                    <div class="saidpl-cta-features">
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Quality Workmanship</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Timely Delivery</span>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-check"></i>
+                            <span>Reliable Solutions</span>
+                        </div>
+                    </div>
+                    <a href="./asset/page/contact.html" class="saidpl-cta-button">
+                        <span>Contact Us</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Dedicated Team Section -->
+    <section class="team-section section-padding" id="team">
+        <div class="container">
+
+            <div class="section-header-flex slide-on-scroll slide-up">
+                <div>
+                    <span class="sub-heading">Our TEAM MEMBER</span>
+                    <h2 class="section-title">Our Dedicated Team</h2>
+                </div>
+                <a href="./asset/page/team.html" class="btn btn-accent">
+                    <span>All Team Members</span>
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+            </div>
+
+            <div class="team-grid staggered-slide slide-on-scroll slide-up">
+                <div class="team-card">
+                    <div class="team-img-wrap">
+                        <img src="./asset/img/team0.png" alt="Mr. OK Muthukrishnan">
+                    </div>
+                    <div class="team-content">
+                        <h4 class="team-name">Mr. OK Muthukrishnan</h4>
+                        <span class="team-title">Founder</span>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img-wrap">
+                        <img src="./asset/img/team1.jpg" alt="Mr. C Sivapragasam">
+                    </div>
+                    <div class="team-content">
+                        <h4 class="team-name">Mr. C Sivapragasam</h4>
+                        <span class="team-title">Project Manager</span>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-img-wrap">
+                        <img src="./asset/img/team2.jpg" alt="Ms. Nivedhitha Muthukrishnan">
+                    </div>
+                    <div class="team-content">
+                        <h4 class="team-name">Ms. Nivedhitha Muthukrishnan</h4>
+                        <span class="team-title">Lead Architect</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script src="./asset/includes/navbar.html"></script>
+    </section>
+    <!-- Footer Navigation -->
+    <div id="saidplFooter"></div>
+    <!-- ============================================================
+     SAIDPL FLOATING ACTION BUTTONS
+     Scoped component - will not affect other page CSS
+     ============================================================ -->
+
+    <div id="saidplFloatingActions"></div>
+    <!--Scripts-->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./asset/js/main.js"></script>
+    <script src="./asset/js/navbar.js"></script>
+    <script src="./asset/js/nav-call.js"></script>
+    <script src="./asset/js/common.js"></script>
+    <script src="./asset/js/float.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+</body>
+
+</html>

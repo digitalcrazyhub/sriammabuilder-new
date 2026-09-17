@@ -1,0 +1,741 @@
+/* ==========================================================================
+   ROOT VARIABLES (UNCHANGED)
+   ========================================================================== */
+:root {
+    /* Brand */
+    --primary-color: #0A0A0A;
+    --secondary-color: #A5000D;
+    --accent-color: #A5000D;
+
+    /* Text */
+    --text-color: #1E1E1E;
+    --text-light: #666666;
+
+    /* Background */
+    --bg-color: #FFFFFF;
+    --bg-light: #F5F5F5;
+    --bg-dark: #0A0A0A;
+
+    /* Border */
+    --border-color: #E5E5E5;
+
+    /* Common */
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* ==========================================================================
+   RESET & FOUNDATION
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section-padding {
+    padding: 5.5rem 0;
+}
+
+.sub-heading {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.text-highlight {
+    color: #A5000D;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   SLIDING SCROLL ANIMATIONS (INTERSECTION OBSERVER)
+   ========================================================================== */
+.slide-on-scroll {
+    opacity: 0;
+    will-change: transform, opacity;
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slide-left {
+    transform: translate3d(-70px, 0, 0);
+}
+
+.slide-right {
+    transform: translate3d(70px, 0, 0);
+}
+
+.slide-up {
+    transform: translate3d(0, 50px, 0);
+}
+
+.slide-on-scroll.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+/* ==========================================================================
+   SITE HEADER & NAVIGATION
+   ========================================================================== */
+.site-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--primary-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 85px;
+}
+
+.brand-logo {
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--white);
+}
+
+.logo-accent {
+    color: var(--accent-color);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #D0D0D0;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.35s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-color);
+}
+
+.header-phone-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 1.4rem;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.header-phone-btn:hover {
+    background-color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 183, 3, 0.3);
+}
+
+.mobile-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   1. HERO BANNER WITH RESPONSIVE LOOPING VIDEO
+   ========================================================================== */
+.industrial-hero {
+    position: relative;
+    width: 100%;
+    height: 56vh;
+    min-height: 440px;
+    max-height: 650px;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.video-bg-wrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.04);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.8) 100%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 860px;
+    padding: 0 1.5rem;
+}
+
+.badge-tag {
+    display: inline-block;
+    padding: 0.4rem 1.25rem;
+    background-color: rgba(255, 183, 3, 0.15);
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.15rem;
+}
+
+.hero-title {
+    font-size: clamp(2.3rem, 4.5vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.18;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.6);
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 1.3vw, 1.2rem);
+    color: #D2D2D2;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+}
+
+.breadcrumbs {
+    font-size: 0.95rem;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.breadcrumbs a {
+    color: var(--accent-color);
+}
+
+.breadcrumbs span {
+    margin: 0 0.5rem;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.breadcrumbs .current {
+    color: #A3A3A3;
+}
+
+/* ==========================================================================
+   2. INTRO SECTION
+   ========================================================================== */
+.intro-section {
+    padding: 5rem 0 3.5rem;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.intro-lead-box {
+    max-width: 960px;
+    margin: 0 auto 3.5rem;
+}
+
+.intro-lead {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.expertise-header {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.expertise-title {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+    position: relative;
+    display: inline-block;
+}
+
+.expertise-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    margin: 0.6rem auto 0;
+}
+
+.expertise-desc {
+    color: var(--text-light);
+    font-size: 1.05rem;
+    margin-top: 1rem;
+}
+
+/* ==========================================================================
+   3. ALTERNATING EXPERTISE BANDS
+   ========================================================================== */
+.expertise-band {
+    padding: 4.5rem 0;
+}
+
+.bg-light-band {
+    background-color: #EFEFEF;
+}
+
+.bg-white-band {
+    background-color: var(--bg-color);
+}
+
+.band-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.band-grid.reverse {
+    grid-template-columns: 1.1fr 1fr;
+}
+
+.band-grid.reverse .band-media {
+    order: 2;
+}
+
+.band-grid.reverse .band-content {
+    order: 1;
+}
+
+.media-frame {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.media-frame img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.media-frame:hover img {
+    transform: scale(1.05);
+}
+
+.band-title {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--accent-color);
+    margin-bottom: 1.25rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.band-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 45px;
+    height: 3px;
+    background-color: #A5000D;
+}
+
+.band-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.band-text:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================================
+   4. WHY CHOOSE US & OUR PROCESS (DARK SPLIT SECTION)
+   ========================================================================== */
+.features-process-section {
+    background-color: var(--bg-dark);
+    color: var(--white);
+}
+
+.features-process-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4.5rem;
+}
+
+.dark-sec-title {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.65rem;
+}
+
+.dark-sec-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+.checklist-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.35rem;
+}
+
+.checklist-items li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: #D2D2D2;
+}
+
+.checklist-items li i {
+    color: #A5000D;
+    font-size: 1.1rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.checklist-items strong {
+    color: var(--white);
+}
+
+/* ==========================================================================
+   5. PARTNER CALLOUT SECTION
+   ========================================================================== */
+.partner-callout-section {
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.partner-box {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.partner-heading {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.partner-desc {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin-bottom: 1.25rem;
+}
+
+.partner-cta {
+    margin-top: 2rem;
+}
+
+.partner-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.95rem 2.2rem;
+    background-color: #A5000D;
+    color: var(--white);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.partner-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================================
+   6. GLOBAL FOOTER (CLEAN WHITE)
+   ========================================================================== */
+.site-footer {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding-top: 5.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.footer-logo {
+    display: inline-block;
+    color: var(--primary-color);
+    margin-bottom: 1.25rem;
+}
+
+.footer-text {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+}
+
+.footer-heading {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 32px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+.footer-links li {
+    margin-bottom: 0.85rem;
+}
+
+.footer-links a {
+    color: var(--text-light);
+    font-size: 0.92rem;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+    padding-left: 4px;
+}
+
+.footer-col p {
+    font-size: 0.92rem;
+    color: var(--text-light);
+    margin-bottom: 0.85rem;
+    line-height: 1.6;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 0.85rem;
+}
+
+.footer-socials a {
+    width: 38px;
+    height: 38px;
+    background: var(--bg-light);
+    color: var(--primary-color);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-color);
+    padding: 1.85rem 0;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.bottom-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .band-grid, 
+    .band-grid.reverse, 
+    .features-process-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .band-grid.reverse .band-media {
+        order: 1;
+    }
+
+    .band-grid.reverse .band-content {
+        order: 2;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: none;
+    }
+
+    .main-nav.nav-open {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+
+    .header-action .header-phone-btn {
+        display: none;
+    }
+
+    .industrial-hero {
+        height: 48vh;
+        min-height: 380px;
+    }
+
+    .hero-title {
+        font-size: 2.1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .media-frame img {
+        height: 260px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partner-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

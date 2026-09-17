@@ -1,0 +1,24 @@
+# Environment / local configuration
+.env
+.env.*
+!.env.example
+backend/config.local.php
+
+# Credentials / private keys
+credentials/
+backend/credentials/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Logs / runtime files
+logs/
+backend/logs/*
+!backend/logs/.gitkeep
+
+# Local tooling
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

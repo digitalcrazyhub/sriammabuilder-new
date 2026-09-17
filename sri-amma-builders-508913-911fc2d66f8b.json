@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "sri-amma-builders-508913",
+  "private_key_id": "911fc2d66f8baf9e5d952d84cacd7beb23ea1002",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC+nvGzuVN1ez/L\nQJxOOqsnFmGw/8Os2S8SuDprTK6bLhT0hmCgNENUDie8eG+YmHHMU+On9+rVQVPD\nB8xyggQNGgL3MRCnqSuktueWkxXKTsLUEybyjbSB6GOROc5wkw4LVmIkvY/BZq+q\nCw4oxinY6pwHFQFhGdFz6BrokLoFB3uWgApW/S5UNQIMlQZlKWBsGcwHlLyT8otN\n9EHX52fUl3uuTXOsbMYFVGUwwyncDqHKu3kmoRAfzqAl8wWaPLD86iPVvJ4mUJ64\nWRcAznKFdJ3bjUthGnRVYKBW9IShk9Ikvixya7gO6iisHr4IjYtWlpw5gNRhO+8f\nBjSZi8JPAgMBAAECggEANZzdrSdMLmg2RpPLAoOkvK8iVdZxsg05nKG9KI2eNF4P\nHcEnrxdT8nGywmL7PCdwJkBX8NedMFKZ3Oo2GeSwgADXYa/ml8lQUZjx5NtEjyx8\nxooGc8TgRoNWcbOY+PebRRwMKXo5UvNvJ7vJRTWK8ov1y1Ygl69bxiY7XzrJXv1B\n/ObVjlqHsvslhbN4c+rfJxs7veIcCNH8PkG3g1hjXSEtR1cTclGCDMQJy3W7PKxU\nDp3J0SZGCuHbZtO/ljKECxoFsoZm30RvW5UKmZLbrJgB6wjMaKztiEx/Tnf+KqB+\n4jnSuEnE0XKpyodMgDUsM/dcOkqmAgw9K6mRJ1gZNQKBgQDiJc5KR2H1mfPtEURy\n8OANIufcci9IfDIUU+jUJXV9A5EHgFkUGhlM79EDqYh87kYIbT9YCt8GlwfX6Ncx\nGM0vQ18r1jlWDOQM8Iq4tdLdGtPV3sMWnrOZSuKLMYMlpCyjJrS3uK712AEe60Sm\nQD1VyKOKaYsWvejFIi9TYJ+lFQKBgQDXyJVT9szdh0rfkY+O6gyv5toigtmqsILj\nn4pr2yA1TqrFJHFmkqcwFQv1sqa5s14bEFYaf5ST1Xvwo0jPKo33xL/9rYcNxawP\nHfxZxUWM6RSXJBdipbsw08Hpok9whb6Mke7N/g4aKRWlCcIn2C20VXbK3+mgNmMK\n4PY6jCxq0wKBgG79yRpxoGVvEuXmVKbpC73GxO9P5172/Yk2iY4deGVL69E3sACK\nsqItDXNzsHZIZ3zZSX6Hj2BnncTdFUiWeJXaxgn40RknqIGlSSBQtNYpxZAxDaS7\nbUAuHbPdMBW4VuQYKhgFf3FPe3VWWNITs0a3+3QCSu51dJnUJlAQmynlAoGBALEW\n6/6JqJ4R/4+1rUSTrq/Z3KHAE5Uy4WifsYFMx4UYN6wteWe96bnbPAJ7iLsUiqHZ\naWC73Zrp9JqL1yA2A2cZMJungxP5a3jImiaucKLxUrWrqAmMjDDJSPZN/7YP/U7u\nITcrTjWIDDxy4sXCc9fw39olo12Z5PSzpUBtc7KDAoGAS+5WR91UpikbeZGX+IcN\nDITbN/+HsoIXgnf0J4bXcw0JFqShiRoeqtN9mDpn/w8Z5eMMDXK/8Tc4YAfTdenn\nfXIqbOwUbtc8RHzgCGHy20iwbkffFB895/Fon1+M21cULJV+tD1c3QFwFFrxlQ+7\nWp04RN2tXdupN/JKelPgoJ0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "sriamma-sheets@sri-amma-builders-508913.iam.gserviceaccount.com",
+  "client_id": "114738460328388302006",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sriamma-sheets%40sri-amma-builders-508913.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
