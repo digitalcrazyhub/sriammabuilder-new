@@ -1,6 +1,21 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__ . '/vendor/autoload.php';
+
+use Dotenv\Dotenv;
+
+$envPath = dirname(__DIR__).'/backend';
+
+$dotenv = Dotenv::createImmutable($envPath);
+$dotenv->safeLoad();
+
+error_log('ENV PATH: ' . $envPath);
+error_log('ENV FILE EXISTS: ' . (file_exists($envPath . '/.env') ? 'YES' : 'NO'));
+error_log(
+    'RECAPTCHA SECRET EXISTS: ' .
+    (isset($_ENV['RECAPTCHA_SECRET_KEY']) ? 'YES' : 'NO')
+);
 /*
 |--------------------------------------------------------------------------
 | Environment configuration
@@ -11,9 +26,13 @@ declare(strict_types=1);
 
 function sabEnv(string $key, string $default = ''): string
 {
-    $value = getenv($key);
+    $value = $_ENV[$key] ?? $_SERVER[$key] ?? getenv($key);
 
-    return $value === false ? $default : trim($value);
+    if ($value === false || $value === null) {
+        return $default;
+    }
+
+    return trim((string) $value);
 }
 
 /*
@@ -24,6 +43,22 @@ function sabEnv(string $key, string $default = ''): string
 
 define('SITE_NAME', sabEnv('SITE_NAME', 'Sri Amma Industrial Developer PVT LTD'));
 define('SITE_URL', rtrim(sabEnv('SITE_URL', 'https://www.sriammaindustrial.com'), '/'));
+
+define(
+    'PROJECT_ROOT',
+    rtrim(sabEnv('PROJECT_ROOT', '/'), '/') . '/'
+);
+
+define(
+    'COMPONENTS_PATH',
+    rtrim(
+        sabEnv(
+            'COMPONENTS_PATH',
+            PROJECT_ROOT . 'asset/includes/'
+        ),
+        '/'
+    ) . '/'
+);
 
 /*
 |--------------------------------------------------------------------------

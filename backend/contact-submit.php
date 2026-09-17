@@ -317,7 +317,10 @@ $captcha = verifyRecaptchaV3(
     $recaptchaToken,
     RECAPTCHA_ACTION
 );
-
+error_log(
+        'Recaptcaha ' .
+        print_r($captcha,true)
+    );
 if (
     empty($captcha['success'])
 ) {

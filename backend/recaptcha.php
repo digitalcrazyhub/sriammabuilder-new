@@ -20,6 +20,10 @@ function verifyRecaptchaV3(
         'remoteip' => $_SERVER['REMOTE_ADDR'] ?? ''
     ]);
 
+error_log(
+        'Recaptcaha V3 file' .
+        print_r($postData,true)
+    );
     $ch = curl_init(
         'https://www.google.com/recaptcha/api/siteverify'
     );
@@ -55,7 +59,10 @@ function verifyRecaptchaV3(
         $result,
         true
     );
-
+error_log(
+        'Recaptcaha V3 file' .
+        print_r($data,true)
+    );
     if (!is_array($data)) {
         return [
             'success' => false,
@@ -88,7 +95,7 @@ function verifyRecaptchaV3(
     if ($score < RECAPTCHA_MIN_SCORE) {
         return [
             'success' => false,
-            'message' => 'reCAPTCHA verification failed.'
+            'message' => 'reCAPTCHA verification score failed.'
         ];
     }
 

@@ -1,6 +1,19 @@
 (() => {
     'use strict';
 
+    /*
+    |--------------------------------------------------------------------------
+    | Project Base Path
+    |--------------------------------------------------------------------------
+    |
+    | Localhost:
+    | /sriammabuilders/
+    |
+    | Production:
+    | /
+    |
+    */
+
     async function loadComponent(selector, url) {
         const host = document.querySelector(selector);
 
@@ -23,47 +36,81 @@
 
         } catch (error) {
             host.removeAttribute('aria-busy');
-            console.error(`Unable to load component ${url}:`, error);
+
+            console.error(
+                `Unable to load component ${url}:`,
+                error
+            );
         }
     }
 
     function finishSharedComponents() {
-        const year = document.getElementById('saidplCurrentYear');
+
+        /*
+        |--------------------------------------------------------------------------
+        | Dynamic Footer Year
+        |--------------------------------------------------------------------------
+        */
+
+        const year = document.getElementById(
+            'saidplCurrentYear'
+        );
 
         if (year) {
-            year.textContent = String(new Date().getFullYear());
+            year.textContent = String(
+                new Date().getFullYear()
+            );
         }
+
+        /*
+        |--------------------------------------------------------------------------
+        | Lucide Icons
+        |--------------------------------------------------------------------------
+        */
 
         if (window.lucide) {
             window.lucide.createIcons();
         }
+
+        /*
+        |--------------------------------------------------------------------------
+        | Components Ready Event
+        |--------------------------------------------------------------------------
+        */
 
         document.dispatchEvent(
             new CustomEvent('saidpl:components-ready')
         );
     }
 
-    document.addEventListener('DOMContentLoaded', async () => {
+    document.addEventListener(
+        'DOMContentLoaded',
+        async () => {
 
-        await Promise.all([
-            loadComponent(
-                '#saidplNavHeader',
-                './asset/includes/navbar.html'
-            ),
+            await Promise.all([
 
-            loadComponent(
-                '#saidplFooter',
-                './asset/includes/footer.html'
-            ),
+                loadComponent(
+                    '#saidplNavHeader',
+                    `${window.SAB_CONFIG.componentsPath}navbar.html`
+                ),
 
-            loadComponent(
-                '#saidplFloatingActions',
-                './asset/includes/floating-actions.html'
-            )
-        ]);
+                loadComponent(
+                    '#saidplFooter',
+                    `${window.SAB_CONFIG.componentsPath}footer.html`
+                ),
 
-        finishSharedComponents();
+                loadComponent(
+                    '#saidplFloatingActions',
+                    `${window.SAB_CONFIG.componentsPath}floating-actions.html`
+                )
 
-    }, { once: true });
+            ]);
+
+            finishSharedComponents();
+
+        },
+        { once: true }
+    );
 
 })();
+
